@@ -124,10 +124,22 @@ export default function Index() {
 
   return (
     <div className="min-h-screen w-full bg-white relative overflow-hidden">
-      {/* Gradient background blur effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[10%] left-[20%] sm:top-[150px] sm:left-[322px] w-[400px] h-[400px] sm:w-[880px] sm:h-[880px] rounded-full bg-chat-blue-blur opacity-100 blur-[100px] sm:blur-[150px]"></div>
-        <div className="absolute top-[-10%] left-[-20%] sm:top-[0px] sm:left-[-142px] w-[600px] h-[600px] sm:w-[1414px] sm:h-[1414px] rounded-full bg-chat-pink-blur opacity-100 blur-[150px] sm:blur-[250px]"></div>
+      {/* Gradient background blur effects - exact from Figma */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Blue circle - cx="762" cy="590" r="140" with blur 150px */}
+        <div className="absolute w-[280px] h-[280px] rounded-full bg-[#89BCFF] blur-[150px]"
+             style={{
+               left: 'calc(50% + 404px - 140px)', // 762px from left of 1272px container, centered
+               top: 'calc(60% + 450px - 140px)'   // 590px from top of 781px container
+             }}>
+        </div>
+        {/* Pink circle - cx="565" cy="707" r="207" with blur 250px */}
+        <div className="absolute w-[414px] h-[414px] rounded-full bg-[#FF86E1] blur-[250px]"
+             style={{
+               left: 'calc(50% + 207px - 207px)', // 565px from left of 1272px container, centered
+               top: 'calc(60% + 567px - 207px)'   // 707px from top of 781px container
+             }}>
+        </div>
       </div>
 
       {/* Main container */}
