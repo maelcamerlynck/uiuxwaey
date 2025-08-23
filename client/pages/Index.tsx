@@ -1,12 +1,21 @@
 import { useState } from "react";
 
-// Sparkle icon component
-const SparkleIcon = ({ className = "" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M12 4.5C12 4.5 12.579 9.90745 14.836 12.164C17.093 14.4207 22.5 15 22.5 15C22.5 15 17.093 15.5793 14.836 17.836C12.579 20.0926 12 25.5 12 25.5C12 25.5 11.421 20.0926 9.164 17.836C6.907 15.5793 1.5 15 1.5 15C1.5 15 6.907 14.4207 9.164 12.164C11.421 9.90745 12 4.5 12 4.5Z"
-      fill="currentColor"
-    />
+// Sparkle icon components - exact from Figma design
+const SparkleIcon1 = ({ className = "" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10.5 0.085968C10.5 0.085968 11.079 5.4934 13.336 7.75002C15.593 10.0066 21 10.586 21 10.586C21 10.586 15.593 11.1653 13.336 13.4219C11.079 15.6785 10.5 21.086 10.5 21.086C10.5 21.086 9.921 15.6785 7.664 13.4219C5.407 11.1653 0 10.586 0 10.586C0 10.586 5.407 10.0066 7.664 7.75002C9.921 5.4934 10.5 0.085968 10.5 0.085968Z" fill="#160211"/>
+  </svg>
+);
+
+const SparkleIcon2 = ({ className = "" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10.5 8C10.5 8 11.079 13.4074 13.336 15.664C15.593 17.9207 21 18.5 21 18.5C21 18.5 15.593 19.0793 13.336 21.336C11.079 23.5926 10.5 29 10.5 29C10.5 29 9.921 23.5926 7.664 21.336C5.407 19.0793 0 18.5 0 18.5C0 18.5 5.407 17.9207 7.664 15.664C9.921 13.4074 10.5 8 10.5 8Z" fill="#160211"/>
+  </svg>
+);
+
+const SparkleIcon3 = ({ className = "" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10.5 16.914C10.5 16.914 11.079 22.3215 13.336 24.5781C15.593 26.8347 21 27.414 21 27.414C21 27.414 15.593 27.9934 13.336 30.25C11.079 32.5066 10.5 37.914 10.5 37.914C10.5 37.914 9.921 32.5066 7.664 30.25C5.407 27.9934 0 27.414 0 27.414C0 27.414 5.407 26.8347 7.664 24.5781C9.921 22.3215 10.5 16.914 10.5 16.914Z" fill="#160211"/>
   </svg>
 );
 
