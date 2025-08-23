@@ -1,20 +1,20 @@
 import { useState } from "react";
 
-// Sparkle icon components - exact from Figma design
+// Sparkle icon components - corrected to display properly
 const SparkleIcon1 = ({ className = "" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className={className} viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10.5 0.085968C10.5 0.085968 11.079 5.4934 13.336 7.75002C15.593 10.0066 21 10.586 21 10.586C21 10.586 15.593 11.1653 13.336 13.4219C11.079 15.6785 10.5 21.086 10.5 21.086C10.5 21.086 9.921 15.6785 7.664 13.4219C5.407 11.1653 0 10.586 0 10.586C0 10.586 5.407 10.0066 7.664 7.75002C9.921 5.4934 10.5 0.085968 10.5 0.085968Z" fill="#160211"/>
   </svg>
 );
 
 const SparkleIcon2 = ({ className = "" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className={className} viewBox="0 0 21 30" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10.5 8C10.5 8 11.079 13.4074 13.336 15.664C15.593 17.9207 21 18.5 21 18.5C21 18.5 15.593 19.0793 13.336 21.336C11.079 23.5926 10.5 29 10.5 29C10.5 29 9.921 23.5926 7.664 21.336C5.407 19.0793 0 18.5 0 18.5C0 18.5 5.407 17.9207 7.664 15.664C9.921 13.4074 10.5 8 10.5 8Z" fill="#160211"/>
   </svg>
 );
 
 const SparkleIcon3 = ({ className = "" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className={className} viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10.5 16.914C10.5 16.914 11.079 22.3215 13.336 24.5781C15.593 26.8347 21 27.414 21 27.414C21 27.414 15.593 27.9934 13.336 30.25C11.079 32.5066 10.5 37.914 10.5 37.914C10.5 37.914 9.921 32.5066 7.664 30.25C5.407 27.9934 0 27.414 0 27.414C0 27.414 5.407 26.8347 7.664 24.5781C9.921 22.3215 10.5 16.914 10.5 16.914Z" fill="#160211"/>
   </svg>
 );
