@@ -147,8 +147,12 @@ export default function Index() {
             <SparkleIcon2 className="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" style={{animationDelay: '1s', animationDuration: '2.5s'}} />
             <SparkleIcon1 className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" style={{animationDelay: '0.5s', animationDuration: '3.5s'}} />
           </div>
-          <h1 className="text-xl sm:text-2xl font-manrope text-chat-dark font-normal text-center">
-            Ask our AI anything
+          <h1 className="text-xl sm:text-2xl font-manrope text-chat-dark font-normal text-center relative">
+            <span className="relative inline-block">
+              Ask our AI anything
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 animate-pulse"
+                   style={{animationDuration: '4s', animationDelay: '2s'}}></div>
+            </span>
           </h1>
         </div>
 
