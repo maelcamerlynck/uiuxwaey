@@ -137,7 +137,7 @@ export default function Index() {
 
         {/* Chat conversation area */}
         {showChat && (
-          <div className="flex flex-col gap-6 mb-8 px-4">
+          <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 px-0 sm:px-4">
             {conversation.map((msg, index) => (
               <div key={index} className={`flex ${msg.sender === "Me" ? "justify-start" : "justify-end"}`}>
                 <ChatMessage sender={msg.sender}>
@@ -155,11 +155,11 @@ export default function Index() {
 
         {/* Suggestions section - only show when not in chat mode */}
         {!showChat && (
-          <div className="flex flex-col items-start gap-4 mb-8 px-4">
+          <div className="flex flex-col items-start gap-4 mb-6 sm:mb-8 px-0 sm:px-4">
             <div className="text-sm font-manrope text-chat-muted font-bold">
               Suggestions on what to ask Our AI
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 w-full">
               {suggestions.map((suggestion, index) => (
                 <SuggestionCard key={index} onClick={() => handleSuggestionClick(suggestion)}>
                   {suggestion}
@@ -170,7 +170,7 @@ export default function Index() {
         )}
 
         {/* Bottom input area */}
-        <div className="mt-auto px-4">
+        <div className="mt-auto px-0 sm:px-4">
           <div className="flex w-full max-w-[883px] mx-auto p-2.5 justify-between items-center rounded-lg border border-chat-dark/30 bg-white">
             <input
               type="text"
@@ -178,13 +178,13 @@ export default function Index() {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Ask me anything about your projects"
-              className="flex-1 bg-transparent text-sm font-manrope text-chat-muted font-normal outline-none placeholder:text-chat-muted"
+              className="flex-1 bg-transparent text-sm font-manrope text-chat-muted font-normal outline-none placeholder:text-chat-muted px-2"
             />
             <button
               onClick={handleSendMessage}
-              className="w-9 h-9 flex items-center justify-center text-chat-muted/50 hover:text-chat-muted transition-colors"
+              className="w-9 h-9 flex items-center justify-center text-chat-muted/50 hover:text-chat-muted transition-colors flex-shrink-0"
             >
-              <SendIcon className="w-9 h-9" />
+              <SendIcon className="w-8 h-8 sm:w-9 sm:h-9" />
             </button>
           </div>
         </div>
