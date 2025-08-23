@@ -27,7 +27,7 @@ const SendIcon = ({ className = "" }: { className?: string }) => (
 const SuggestionCard = ({ children, onClick }: { children: React.ReactNode, onClick?: () => void }) => (
   <button
     onClick={onClick}
-    className="inline-flex p-2.5 justify-center items-center gap-2.5 rounded-lg border border-white bg-white/50 backdrop-blur-sm hover:bg-white/60 transition-all duration-200 text-sm font-dm-sans text-chat-dark font-normal leading-normal"
+    className="inline-flex p-2.5 justify-center items-center gap-2.5 rounded-lg border border-white bg-white/50 backdrop-blur-sm hover:bg-white/60 transition-all duration-200 text-sm font-dm-sans text-chat-dark font-normal leading-normal w-full sm:w-auto min-h-[56px]"
   >
     {children}
   </button>
