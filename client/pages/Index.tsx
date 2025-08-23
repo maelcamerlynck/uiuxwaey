@@ -140,12 +140,12 @@ export default function Index() {
 
       {/* Main container */}
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 min-h-screen flex flex-col">
-        {/* Header with sparkles and title */}
+        {/* Header with conscious sparkles and title */}
         <div className="flex flex-col items-center gap-8 sm:gap-12 mt-16 sm:mt-32 mb-8 sm:mb-16">
           <div className="flex items-center justify-center gap-4 sm:gap-6">
-            <SparkleIcon3 className="w-5 h-5 sm:w-6 sm:h-6" />
-            <SparkleIcon2 className="w-4 h-4 sm:w-5 sm:h-5" />
-            <SparkleIcon1 className="w-5 h-5 sm:w-6 sm:h-6" />
+            <SparkleIcon3 className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" style={{animationDelay: '0s', animationDuration: '3s'}} />
+            <SparkleIcon2 className="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" style={{animationDelay: '1s', animationDuration: '2.5s'}} />
+            <SparkleIcon1 className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" style={{animationDelay: '0.5s', animationDuration: '3.5s'}} />
           </div>
           <h1 className="text-xl sm:text-2xl font-manrope text-chat-dark font-normal text-center">
             Ask our AI anything
