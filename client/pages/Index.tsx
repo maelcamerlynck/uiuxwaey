@@ -243,7 +243,7 @@ export default function Index() {
               onClick={handleSendMessage}
               className="w-9 h-9 flex items-center justify-center text-chat-muted/50 hover:text-chat-muted transition-colors flex-shrink-0"
             >
-              <SendIcon className="w-8 h-8 sm:w-9 sm:h-9" />
+              <SparkleSendIcon className="w-8 h-8 sm:w-9 sm:h-9" />
             </button>
           </div>
         </div>
