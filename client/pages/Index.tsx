@@ -134,10 +134,10 @@ export default function Index() {
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 min-h-screen flex flex-col">
         {/* Header with sparkles and title */}
         <div className="flex flex-col items-center gap-8 sm:gap-12 mt-16 sm:mt-32 mb-8 sm:mb-16">
-          <div className="flex items-center gap-4 sm:gap-6">
-            <SparkleIcon className="w-6 h-6 sm:w-8 sm:h-8 text-chat-dark" />
-            <SparkleIcon className="w-4 h-4 sm:w-6 sm:h-6 text-chat-dark" />
-            <SparkleIcon className="w-6 h-6 sm:w-8 sm:h-8 text-chat-dark" />
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
+            <SparkleIcon3 className="w-5 h-5 sm:w-6 sm:h-6" />
+            <SparkleIcon2 className="w-4 h-4 sm:w-5 sm:h-5" />
+            <SparkleIcon1 className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
           <h1 className="text-xl sm:text-2xl font-manrope text-chat-dark font-normal text-center">
             Ask our AI anything
