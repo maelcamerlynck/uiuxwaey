@@ -117,20 +117,20 @@ export default function Index() {
     <div className="min-h-screen w-full bg-white relative overflow-hidden">
       {/* Gradient background blur effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[150px] left-[322px] w-[880px] h-[880px] rounded-full bg-chat-blue-blur opacity-100 blur-[150px]"></div>
-        <div className="absolute top-[0px] left-[-142px] w-[1414px] h-[1414px] rounded-full bg-chat-pink-blur opacity-100 blur-[250px]"></div>
+        <div className="absolute top-[10%] left-[20%] sm:top-[150px] sm:left-[322px] w-[400px] h-[400px] sm:w-[880px] sm:h-[880px] rounded-full bg-chat-blue-blur opacity-100 blur-[100px] sm:blur-[150px]"></div>
+        <div className="absolute top-[-10%] left-[-20%] sm:top-[0px] sm:left-[-142px] w-[600px] h-[600px] sm:w-[1414px] sm:h-[1414px] rounded-full bg-chat-pink-blur opacity-100 blur-[150px] sm:blur-[250px]"></div>
       </div>
 
       {/* Main container */}
-      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 py-8 min-h-screen flex flex-col">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 min-h-screen flex flex-col">
         {/* Header with sparkles and title */}
-        <div className="flex flex-col items-center gap-12 mt-32 mb-16">
-          <div className="flex items-center gap-6">
-            <SparkleIcon className="w-8 h-8 text-chat-dark" />
-            <SparkleIcon className="w-6 h-6 text-chat-dark" />
-            <SparkleIcon className="w-8 h-8 text-chat-dark" />
+        <div className="flex flex-col items-center gap-8 sm:gap-12 mt-16 sm:mt-32 mb-8 sm:mb-16">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <SparkleIcon className="w-6 h-6 sm:w-8 sm:h-8 text-chat-dark" />
+            <SparkleIcon className="w-4 h-4 sm:w-6 sm:h-6 text-chat-dark" />
+            <SparkleIcon className="w-6 h-6 sm:w-8 sm:h-8 text-chat-dark" />
           </div>
-          <h1 className="text-2xl font-manrope text-chat-dark font-normal">
+          <h1 className="text-xl sm:text-2xl font-manrope text-chat-dark font-normal text-center">
             Ask our AI anything
           </h1>
         </div>
