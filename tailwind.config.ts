@@ -61,6 +61,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        'chat': {
+          'dark': '#160211',
+          'muted': '#56637E',
+          'light-muted': '#AAA',
+          'blue-blur': '#89BCFF',
+          'pink-blur': '#FF86E1',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
