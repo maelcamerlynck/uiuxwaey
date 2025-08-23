@@ -34,24 +34,24 @@ const SuggestionCard = ({ children, onClick }: { children: React.ReactNode, onCl
 );
 
 // Chat message component
-const ChatMessage = ({ sender, children, isLoading = false }: { 
-  sender: "Me" | "Our AI", 
+const ChatMessage = ({ sender, children, isLoading = false }: {
+  sender: "Me" | "Our AI",
   children: React.ReactNode,
-  isLoading?: boolean 
+  isLoading?: boolean
 }) => (
-  <div className="flex flex-col items-start w-full max-w-md">
+  <div className="flex flex-col items-start w-full max-w-xs sm:max-w-md lg:max-w-lg">
     <div className="text-xs font-manrope text-black/60 uppercase tracking-wide mb-2 font-medium">
       {sender}
     </div>
-    <div className={`flex p-2.5 justify-center items-center gap-2.5 self-stretch rounded-lg border border-white ${isLoading ? 'bg-gradient-to-r from-white/25 to-white/40' : 'bg-white/50'} backdrop-blur-sm`}>
+    <div className={`flex p-2.5 justify-center items-start gap-2.5 self-stretch rounded-lg border border-white ${isLoading ? 'bg-gradient-to-r from-white/25 to-white/40' : 'bg-white/50'} backdrop-blur-sm min-h-[50px]`}>
       {isLoading ? (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-center w-full gap-2">
           <SparkleIcon className="w-4 h-4 text-white animate-pulse" />
           <SparkleIcon className="w-3 h-3 text-white animate-pulse" style={{ animationDelay: '0.2s' }} />
           <SparkleIcon className="w-4 h-4 text-white animate-pulse" style={{ animationDelay: '0.4s' }} />
         </div>
       ) : (
-        <div className="text-sm font-manrope text-chat-dark font-normal leading-normal">
+        <div className="text-sm font-manrope text-chat-dark font-normal leading-relaxed whitespace-pre-line">
           {children}
         </div>
       )}
