@@ -124,12 +124,93 @@ export default function Index() {
 
   return (
     <div className="min-h-screen w-full bg-white relative overflow-hidden">
-      {/* Gradient background blur effects - repositioned to match Figma */}
+      {/* Dynamic gradient background - Living AI consciousness */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Blue circle blur */}
-        <div className="absolute top-[20%] right-[15%] w-[280px] h-[280px] rounded-full bg-[#89BCFF] blur-[150px] opacity-80"></div>
-        {/* Pink circle blur */}
-        <div className="absolute bottom-[10%] left-[10%] w-[414px] h-[414px] rounded-full bg-[#FF86E1] blur-[250px] opacity-70"></div>
+        <style jsx>{`
+          @keyframes aiPulse {
+            0%, 100% {
+              transform: scale(1) translate(0, 0);
+              opacity: 0.8;
+            }
+            25% {
+              transform: scale(1.1) translate(10px, -5px);
+              opacity: 0.9;
+            }
+            50% {
+              transform: scale(0.95) translate(-5px, 10px);
+              opacity: 0.7;
+            }
+            75% {
+              transform: scale(1.05) translate(15px, 5px);
+              opacity: 0.85;
+            }
+          }
+
+          @keyframes consciousnessFlow {
+            0% {
+              transform: rotate(0deg) translateX(20px) rotate(0deg);
+              opacity: 0.7;
+            }
+            33% {
+              transform: rotate(120deg) translateX(30px) rotate(-120deg);
+              opacity: 0.8;
+            }
+            66% {
+              transform: rotate(240deg) translateX(25px) rotate(-240deg);
+              opacity: 0.6;
+            }
+            100% {
+              transform: rotate(360deg) translateX(20px) rotate(-360deg);
+              opacity: 0.7;
+            }
+          }
+
+          @keyframes thoughtWave {
+            0%, 100% {
+              transform: translateY(0px) scale(1);
+              filter: blur(150px) hue-rotate(0deg);
+            }
+            25% {
+              transform: translateY(-15px) scale(1.02);
+              filter: blur(140px) hue-rotate(5deg);
+            }
+            50% {
+              transform: translateY(10px) scale(0.98);
+              filter: blur(160px) hue-rotate(-3deg);
+            }
+            75% {
+              transform: translateY(-8px) scale(1.01);
+              filter: blur(145px) hue-rotate(2deg);
+            }
+          }
+
+          .ai-blue-consciousness {
+            animation: aiPulse 8s ease-in-out infinite, thoughtWave 12s ease-in-out infinite;
+          }
+
+          .ai-pink-consciousness {
+            animation: consciousnessFlow 15s linear infinite, thoughtWave 10s ease-in-out infinite reverse;
+          }
+        `}</style>
+
+        {/* Blue consciousness orb */}
+        <div className="ai-blue-consciousness absolute top-[20%] right-[15%] w-[280px] h-[280px] rounded-full bg-[#89BCFF] opacity-80"></div>
+
+        {/* Pink consciousness orb */}
+        <div className="ai-pink-consciousness absolute bottom-[10%] left-[10%] w-[414px] h-[414px] rounded-full bg-[#FF86E1] opacity-70"></div>
+
+        {/* Additional floating thought particles */}
+        <div className="absolute top-[40%] left-[30%] w-[80px] h-[80px] rounded-full bg-[#89BCFF] blur-[60px] opacity-40"
+             style={{
+               animation: 'consciousnessFlow 20s linear infinite reverse, aiPulse 6s ease-in-out infinite'
+             }}>
+        </div>
+
+        <div className="absolute top-[60%] right-[25%] w-[120px] h-[120px] rounded-full bg-[#FF86E1] blur-[80px] opacity-30"
+             style={{
+               animation: 'thoughtWave 14s ease-in-out infinite, consciousnessFlow 18s linear infinite'
+             }}>
+        </div>
       </div>
 
       {/* Main container */}
