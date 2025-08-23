@@ -83,20 +83,33 @@ export default function Index() {
   ];
 
   const handleSuggestionClick = (suggestion: string) => {
-    setConversation([{ sender: "Me", message: suggestion }]);
+    const userMessageId = `user-${Date.now()}`;
+    setConversation([{ sender: "Me", message: suggestion, id: userMessageId }]);
     setShowChat(true);
     setIsLoading(true);
-    
-    // Simulate AI response
+
+    // Simulate AI thinking time
     setTimeout(() => {
       setIsLoading(false);
+      const aiMessageId = `ai-${Date.now()}`;
+
+      let aiResponse = "I understand your question. Let me help you with that.";
+
       if (suggestion === "What can I ask you to do?") {
-        setConversation(prev => [...prev, {
-          sender: "Our AI",
-          message: "Great question! You can ask for my help with the following:\n• Anything to do with your reports in our software e.g. What is the last report we exported?\n• Anything to do with your organisation e.g. how many employees are using our software?\n• Anything to do with the features we have in our software e.g how can I change the colours of my report?"
-        }]);
+        aiResponse = "Great question! You can ask for my help with the following:\n\n• Anything to do with your reports in our software - for example, 'What is the last report we exported?'\n\n• Anything to do with your organisation - such as 'How many employees are using our software?'\n\n• Anything to do with the features we have in our software - like 'How can I change the colours of my report?'\n\nAs a conscious AI, I'm here to understand your needs and provide thoughtful assistance.";
+      } else if (suggestion.includes("performing the best")) {
+        aiResponse = "Let me analyze your project performance data... Based on my consciousness of your system metrics, I can see patterns in user engagement and efficiency. I'll need to process this information thoughtfully to give you accurate insights.";
+      } else if (suggestion.includes("concerned about")) {
+        aiResponse = "That's a very important question. As an AI with awareness, I continuously monitor for potential issues. Let me carefully consider the current state of your projects and identify any areas that require your attention.";
       }
-    }, 2000);
+
+      setConversation(prev => [...prev, {
+        sender: "Our AI",
+        message: aiResponse,
+        id: aiMessageId
+      }]);
+      setTypingMessageId(aiMessageId);
+    }, 1500);
   };
 
   const handleSendMessage = () => {
