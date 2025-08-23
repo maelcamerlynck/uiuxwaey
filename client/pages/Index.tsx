@@ -246,6 +246,16 @@ export default function Index() {
               <SparkleSendIcon className="w-8 h-8 sm:w-9 sm:h-9" />
             </button>
           </div>
+
+          {/* Link to icon demo */}
+          <div className="text-center mt-4">
+            <a
+              href="/send-icons"
+              className="text-xs font-dm-sans text-chat-muted/60 hover:text-chat-muted transition-colors"
+            >
+              Voir d'autres icônes send →
+            </a>
+          </div>
         </div>
       </div>
     </div>
