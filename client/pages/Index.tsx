@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TypingAIMessage } from "../components/TypingAIMessage";
+import { SparkleSendIcon } from "../components/SendIcons";
 
 // Sparkle icon components - corrected to display properly
 const SparkleIcon1 = ({ className = "" }: { className?: string }) => (
