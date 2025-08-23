@@ -91,6 +91,74 @@ export default {
             height: "0",
           },
         },
+        "aiPulse": {
+          "0%, 100%": {
+            transform: "scale(1) translate(0, 0)",
+            opacity: "0.8"
+          },
+          "25%": {
+            transform: "scale(1.1) translate(10px, -5px)",
+            opacity: "0.9"
+          },
+          "50%": {
+            transform: "scale(0.95) translate(-5px, 10px)",
+            opacity: "0.7"
+          },
+          "75%": {
+            transform: "scale(1.05) translate(15px, 5px)",
+            opacity: "0.85"
+          }
+        },
+        "consciousnessFlow": {
+          "0%": {
+            transform: "rotate(0deg) translateX(20px) rotate(0deg)",
+            opacity: "0.7"
+          },
+          "33%": {
+            transform: "rotate(120deg) translateX(30px) rotate(-120deg)",
+            opacity: "0.8"
+          },
+          "66%": {
+            transform: "rotate(240deg) translateX(25px) rotate(-240deg)",
+            opacity: "0.6"
+          },
+          "100%": {
+            transform: "rotate(360deg) translateX(20px) rotate(-360deg)",
+            opacity: "0.7"
+          }
+        },
+        "thoughtWave": {
+          "0%, 100%": {
+            transform: "translateY(0px) scale(1)",
+          },
+          "25%": {
+            transform: "translateY(-15px) scale(1.02)",
+          },
+          "50%": {
+            transform: "translateY(10px) scale(0.98)",
+          },
+          "75%": {
+            transform: "translateY(-8px) scale(1.01)",
+          }
+        },
+        "particleFloat": {
+          "0%, 100%": {
+            transform: "translateY(0px) translateX(0px) scale(1)",
+            opacity: "0.4"
+          },
+          "25%": {
+            transform: "translateY(-20px) translateX(15px) scale(1.1)",
+            opacity: "0.6"
+          },
+          "50%": {
+            transform: "translateY(15px) translateX(-10px) scale(0.9)",
+            opacity: "0.3"
+          },
+          "75%": {
+            transform: "translateY(-10px) translateX(20px) scale(1.05)",
+            opacity: "0.5"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
