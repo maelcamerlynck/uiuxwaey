@@ -55,9 +55,9 @@ const ChatMessage = ({ sender, children, isLoading = false }: {
     <div className={`flex p-2.5 justify-center items-start gap-2.5 self-stretch rounded-lg border border-white ${isLoading ? 'bg-gradient-to-r from-white/25 to-white/40' : 'bg-white/50'} backdrop-blur-sm min-h-[50px]`}>
       {isLoading ? (
         <div className="flex items-center justify-center w-full gap-2">
-          <SparkleIcon1 className="w-4 h-4 text-white animate-pulse" />
-          <SparkleIcon2 className="w-3 h-3 text-white animate-pulse" style={{ animationDelay: '0.2s' }} />
-          <SparkleIcon3 className="w-4 h-4 text-white animate-pulse" style={{ animationDelay: '0.4s' }} />
+          <SparkleIcon1 className="w-4 h-4 text-white animate-pulse" style={{ animationDuration: '1.5s', animationDelay: '0s' }} />
+          <SparkleIcon2 className="w-3 h-3 text-white animate-pulse" style={{ animationDuration: '1.2s', animationDelay: '0.3s' }} />
+          <SparkleIcon3 className="w-4 h-4 text-white animate-pulse" style={{ animationDuration: '1.8s', animationDelay: '0.6s' }} />
         </div>
       ) : (
         <div className="text-sm font-manrope text-chat-dark font-normal leading-relaxed whitespace-pre-line">
