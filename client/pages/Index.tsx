@@ -188,11 +188,19 @@ export default function Index() {
         {/* Chat conversation area */}
         {showChat && (
           <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 px-0 sm:px-4">
-            {conversation.map((msg, index) => (
-              <div key={index} className={`flex ${msg.sender === "Me" ? "justify-start" : "justify-end"}`}>
-                <ChatMessage sender={msg.sender}>
-                  {msg.message}
-                </ChatMessage>
+            {conversation.map((msg) => (
+              <div key={msg.id} className={`flex ${msg.sender === "Me" ? "justify-start" : "justify-end"}`}>
+                {msg.sender === "Our AI" ? (
+                  <TypingAIMessage
+                    message={msg.message}
+                    isActive={typingMessageId === msg.id}
+                    onComplete={() => setTypingMessageId(null)}
+                  />
+                ) : (
+                  <ChatMessage sender={msg.sender}>
+                    {msg.message}
+                  </ChatMessage>
+                )}
               </div>
             ))}
             {isLoading && (
