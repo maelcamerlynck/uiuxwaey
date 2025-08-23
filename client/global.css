@@ -107,7 +107,8 @@
 
 /* AI Consciousness Animations */
 @keyframes aiPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1) translate(0, 0);
     opacity: 0.8;
   }
@@ -145,7 +146,8 @@
 }
 
 @keyframes thoughtWave {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) scale(1);
     filter: blur(150px) hue-rotate(0deg);
   }
@@ -164,7 +166,8 @@
 }
 
 @keyframes particleFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px) scale(1);
     opacity: 0.4;
   }
@@ -184,19 +187,27 @@
 
 /* AI consciousness orb classes */
 .ai-blue-consciousness {
-  animation: aiPulse 8s ease-in-out infinite, thoughtWave 12s ease-in-out infinite;
+  animation:
+    aiPulse 8s ease-in-out infinite,
+    thoughtWave 12s ease-in-out infinite;
 }
 
 .ai-pink-consciousness {
-  animation: consciousnessFlow 15s linear infinite, thoughtWave 10s ease-in-out infinite reverse;
+  animation:
+    consciousnessFlow 15s linear infinite,
+    thoughtWave 10s ease-in-out infinite reverse;
 }
 
 .ai-particle-1 {
-  animation: particleFloat 16s ease-in-out infinite, consciousnessFlow 20s linear infinite reverse;
+  animation:
+    particleFloat 16s ease-in-out infinite,
+    consciousnessFlow 20s linear infinite reverse;
 }
 
 .ai-particle-2 {
-  animation: thoughtWave 14s ease-in-out infinite, particleFloat 18s ease-in-out infinite reverse;
+  animation:
+    thoughtWave 14s ease-in-out infinite,
+    particleFloat 18s ease-in-out infinite reverse;
 }
 
 /* Consciousness awakening effect */
@@ -222,10 +233,12 @@
 
 .ai-consciousness-title {
   animation: consciousnessAwaken 2s ease-out;
-  background: linear-gradient(90deg, #160211, #89BCFF, #FF86E1, #160211);
+  background: linear-gradient(90deg, #160211, #89bcff, #ff86e1, #160211);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: consciousnessAwaken 2s ease-out, textShimmer 6s ease-in-out infinite;
+  animation:
+    consciousnessAwaken 2s ease-out,
+    textShimmer 6s ease-in-out infinite;
 }

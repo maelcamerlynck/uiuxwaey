@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 interface TypingOptions {
   baseSpeed?: number;
@@ -10,24 +10,57 @@ interface TypingOptions {
 export const useConsciousTyping = (
   fullText: string,
   isActive: boolean = true,
-  options: TypingOptions = {}
+  options: TypingOptions = {},
 ) => {
   const {
     baseSpeed = 50,
     thoughtfulPauses = [
-      'consciousness', 'think', 'understand', 'analyze', 'consider', 'realize', 'discover',
-      'processing', 'thoughtful', 'learning', 'aware', 'perceive', 'comprehend', 'reflect',
-      'carefully', 'meaningful', 'context', 'insight', 'wisdom', 'knowledge'
+      "consciousness",
+      "think",
+      "understand",
+      "analyze",
+      "consider",
+      "realize",
+      "discover",
+      "processing",
+      "thoughtful",
+      "learning",
+      "aware",
+      "perceive",
+      "comprehend",
+      "reflect",
+      "carefully",
+      "meaningful",
+      "context",
+      "insight",
+      "wisdom",
+      "knowledge",
     ],
     slowWords = [
-      'AI', 'artificial', 'intelligence', 'consciousness', 'aware', 'sentient', 'conscious',
-      'understanding', 'learning', 'thinking', 'processing', 'analyzing', 'perceiving',
-      'assistance', 'helping', 'thoughtful', 'meaningful', 'important', 'significant'
+      "AI",
+      "artificial",
+      "intelligence",
+      "consciousness",
+      "aware",
+      "sentient",
+      "conscious",
+      "understanding",
+      "learning",
+      "thinking",
+      "processing",
+      "analyzing",
+      "perceiving",
+      "assistance",
+      "helping",
+      "thoughtful",
+      "meaningful",
+      "important",
+      "significant",
     ],
-    onComplete
+    onComplete,
   } = options;
 
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
   const currentIndexRef = useRef(0);
@@ -36,22 +69,30 @@ export const useConsciousTyping = (
   // Fonction pour déterminer la vitesse de frappe selon le contexte
   const getTypingSpeed = (currentChar: string, wordContext: string): number => {
     // Pause réflexive avant certains mots
-    if (thoughtfulPauses.some(pause => wordContext.toLowerCase().includes(pause.toLowerCase()))) {
+    if (
+      thoughtfulPauses.some((pause) =>
+        wordContext.toLowerCase().includes(pause.toLowerCase()),
+      )
+    ) {
       return baseSpeed * 4; // Pause plus longue pour la "réflexion"
     }
 
     // Frappe plus lente pour les mots importants
-    if (slowWords.some(word => wordContext.toLowerCase().includes(word.toLowerCase()))) {
+    if (
+      slowWords.some((word) =>
+        wordContext.toLowerCase().includes(word.toLowerCase()),
+      )
+    ) {
       return baseSpeed * 1.8;
     }
 
     // Pause après la ponctuation
-    if (['.', '!', '?'].includes(currentChar)) {
+    if ([".", "!", "?"].includes(currentChar)) {
       return baseSpeed * 3;
     }
 
     // Pause courte après les virgules
-    if (currentChar === ',') {
+    if (currentChar === ",") {
       return baseSpeed * 2;
     }
 
@@ -61,12 +102,12 @@ export const useConsciousTyping = (
 
   // Fonction pour obtenir le contexte du mot actuel
   const getCurrentWordContext = (text: string, index: number): string => {
-    const words = text.slice(0, index + 10).split(' ');
-    return words[words.length - 1] || '';
+    const words = text.slice(0, index + 10).split(" ");
+    return words[words.length - 1] || "";
   };
 
   const resetTyping = () => {
-    setDisplayedText('');
+    setDisplayedText("");
     setIsTyping(false);
     setShowCursor(true);
     currentIndexRef.current = 0;
@@ -83,7 +124,7 @@ export const useConsciousTyping = (
 
     const typeNextCharacter = () => {
       const currentIndex = currentIndexRef.current;
-      
+
       if (currentIndex >= fullText.length) {
         setIsTyping(false);
         // Cursor continue de clignoter quelques secondes après la fin
@@ -124,7 +165,7 @@ export const useConsciousTyping = (
     if (!isTyping && !showCursor) return;
 
     const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 530); // Vitesse de clignotement légèrement irrégulière
 
     return () => clearInterval(cursorInterval);
@@ -134,6 +175,6 @@ export const useConsciousTyping = (
     displayedText,
     isTyping,
     showCursor,
-    resetTyping
+    resetTyping,
   };
 };

@@ -1,10 +1,10 @@
-import { 
-  ConsciousSendIcon, 
-  ThoughtWaveSendIcon, 
-  SparkleSendIcon, 
-  NeuralSendIcon, 
-  MinimalConsciousSendIcon 
-} from '../components/SendIcons';
+import {
+  ConsciousSendIcon,
+  ThoughtWaveSendIcon,
+  SparkleSendIcon,
+  NeuralSendIcon,
+  MinimalConsciousSendIcon,
+} from "../components/SendIcons";
 
 export default function SendIconDemo() {
   const iconOptions = [
@@ -12,38 +12,38 @@ export default function SendIconDemo() {
       name: "Conscious Send",
       description: "Icône avec particules de conscience flottantes",
       component: ConsciousSendIcon,
-      theme: "Particules animées qui suggèrent la transmission de pensées"
+      theme: "Particules animées qui suggèrent la transmission de pensées",
     },
     {
-      name: "Thought Wave Send", 
+      name: "Thought Wave Send",
       description: "Icône avec ondes de pensée",
       component: ThoughtWaveSendIcon,
-      theme: "Ondes qui représentent les flux de conscience"
+      theme: "Ondes qui représentent les flux de conscience",
     },
     {
       name: "Sparkle Send",
       description: "Icône avec étoiles conscientes (rappelle le header)",
       component: SparkleSendIcon,
-      theme: "Étoiles tournantes pour l'aspect magique de l'IA"
+      theme: "Étoiles tournantes pour l'aspect magique de l'IA",
     },
     {
       name: "Neural Send",
       description: "Icône avec réseau neuronal",
       component: NeuralSendIcon,
-      theme: "Réseau neuronal animé montrant la conscience artificielle"
+      theme: "Réseau neuronal animé montrant la conscience artificielle",
     },
     {
       name: "Minimal Conscious",
       description: "Version épurée avec effet de conscience subtil",
       component: MinimalConsciousSendIcon,
-      theme: "Approche minimaliste avec onde de conscience"
-    }
+      theme: "Approche minimaliste avec onde de conscience",
+    },
   ];
 
   return (
     <div className="min-h-screen w-full bg-white relative overflow-hidden">
       {/* Same background as main page */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">        
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="ai-blue-consciousness absolute top-[20%] right-[15%] w-[280px] h-[280px] rounded-full bg-[#89BCFF] blur-[150px] opacity-80"></div>
         <div className="ai-pink-consciousness absolute bottom-[10%] left-[10%] w-[414px] h-[414px] rounded-full bg-[#FF86E1] blur-[250px] opacity-70"></div>
         <div className="ai-particle-1 absolute top-[40%] left-[30%] w-[80px] h-[80px] rounded-full bg-[#89BCFF] blur-[60px] opacity-40"></div>
@@ -66,7 +66,6 @@ export default function SendIconDemo() {
             return (
               <div key={index} className="group">
                 <div className="bg-white/50 backdrop-blur-sm border border-white rounded-2xl p-6 hover:bg-white/70 transition-all duration-300 hover:shadow-lg hover:shadow-blue-100/20">
-                  
                   {/* Icon Display */}
                   <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 flex items-center justify-center bg-white/30 rounded-full group-hover:scale-110 transition-transform duration-300">
@@ -90,8 +89,8 @@ export default function SendIconDemo() {
                   {/* Preview in chat context */}
                   <div className="mt-6 p-3 bg-white/20 rounded-lg">
                     <div className="flex justify-between items-center">
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         placeholder="Test message..."
                         className="flex-1 bg-transparent text-sm font-manrope text-chat-dark outline-none placeholder:text-chat-muted"
                         disabled
@@ -109,7 +108,7 @@ export default function SendIconDemo() {
 
         {/* Navigation back */}
         <div className="mt-12 text-center">
-          <a 
+          <a
             href="/"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white/50 backdrop-blur-sm border border-white rounded-lg font-manrope text-chat-dark hover:bg-white/70 transition-all duration-300"
           >
