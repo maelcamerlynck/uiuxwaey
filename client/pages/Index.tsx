@@ -73,7 +73,8 @@ export default function Index() {
   const [inputValue, setInputValue] = useState("");
   const [showChat, setShowChat] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [conversation, setConversation] = useState<{ sender: "Me" | "Our AI", message: string }[]>([]);
+  const [conversation, setConversation] = useState<{ sender: "Me" | "Our AI", message: string, id: string }[]>([]);
+  const [typingMessageId, setTypingMessageId] = useState<string | null>(null);
 
   const suggestions = [
     "What can I ask you to do?",
