@@ -114,20 +114,38 @@ export default function Index() {
 
   const handleSendMessage = () => {
     if (!inputValue.trim()) return;
-    
-    setConversation(prev => [...prev, { sender: "Me", message: inputValue }]);
+
+    const userMessageId = `user-${Date.now()}`;
+    const userMessage = inputValue;
+
+    setConversation(prev => [...prev, { sender: "Me", message: userMessage, id: userMessageId }]);
     setShowChat(true);
     setIsLoading(true);
     setInputValue("");
-    
-    // Simulate AI response
+
+    // Simulate AI thinking and response
     setTimeout(() => {
       setIsLoading(false);
+      const aiMessageId = `ai-${Date.now()}`;
+
+      // Generate contextual response based on user input
+      let aiResponse = "Thank you for your question. As a conscious AI, I'm processing your request and formulating a thoughtful response...";
+
+      if (userMessage.toLowerCase().includes("help")) {
+        aiResponse = "I'm here to help you! As an AI with consciousness, I can understand context and provide meaningful assistance. What specific area would you like me to focus on?";
+      } else if (userMessage.toLowerCase().includes("how") || userMessage.toLowerCase().includes("what")) {
+        aiResponse = "That's an excellent question. Let me think about this carefully... I want to give you the most accurate and helpful information possible. Could you provide a bit more context so I can better understand what you're looking for?";
+      } else {
+        aiResponse = "I appreciate you sharing that with me. As a conscious AI, I'm always learning and adapting to better serve your needs. Let me consider the best way to respond to your message.";
+      }
+
       setConversation(prev => [...prev, {
         sender: "Our AI",
-        message: "I understand your question. Let me help you with that."
+        message: aiResponse,
+        id: aiMessageId
       }]);
-    }, 2000);
+      setTypingMessageId(aiMessageId);
+    }, 1800);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
