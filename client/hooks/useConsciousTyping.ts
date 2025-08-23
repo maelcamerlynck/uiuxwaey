@@ -14,8 +14,16 @@ export const useConsciousTyping = (
 ) => {
   const {
     baseSpeed = 50,
-    thoughtfulPauses = ['consciousness', 'think', 'understand', 'analyze', 'consider', 'realize', 'discover'],
-    slowWords = ['AI', 'artificial', 'intelligence', 'consciousness', 'aware', 'sentient'],
+    thoughtfulPauses = [
+      'consciousness', 'think', 'understand', 'analyze', 'consider', 'realize', 'discover',
+      'processing', 'thoughtful', 'learning', 'aware', 'perceive', 'comprehend', 'reflect',
+      'carefully', 'meaningful', 'context', 'insight', 'wisdom', 'knowledge'
+    ],
+    slowWords = [
+      'AI', 'artificial', 'intelligence', 'consciousness', 'aware', 'sentient', 'conscious',
+      'understanding', 'learning', 'thinking', 'processing', 'analyzing', 'perceiving',
+      'assistance', 'helping', 'thoughtful', 'meaningful', 'important', 'significant'
+    ],
     onComplete
   } = options;
 
